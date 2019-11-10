@@ -41,6 +41,7 @@ class MyApp extends StatelessWidget {
       client: client,
       child: CacheProvider(
         child: MaterialApp(
+          debugShowCheckedModeBanner: false,
           home: Login(),
         ),
       ),

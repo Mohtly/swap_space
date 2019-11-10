@@ -36,11 +36,7 @@ class MyItemList extends StatelessWidget {
                             child: SizedBox(
                               height: 250,
                               child: FittedBox(
-                                child: Image.asset(
-                                  'assets/bike.jpg',
-                                  height: 20,
-                                  width: 30,
-                                ),
+                                child: items[index].picture,
                                 fit: BoxFit.fill,
                               ),
                             ),

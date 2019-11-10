@@ -54,7 +54,7 @@ class CreateAccount extends StatelessWidget {
                   TextFormField(
                     decoration: InputDecoration(
                       labelText: "Re Enter Password",
-                      fillColor: Colors.white,
+                      fillColor: Colors.grey[200],
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(25.0),
                       ),
@@ -62,16 +62,21 @@ class CreateAccount extends StatelessWidget {
                   ),
                   Padding(padding: EdgeInsets.only(top: 50.0)),
                   Container(
+                    width: 500,
                     child: RaisedButton(
-                      color: Colors.greenAccent,
+                      color: Colors.orange,
+                      textColor: Colors.white,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18),
+                      ),
                       child: Text('Submit'),
-                      onPressed: () {Navigator.push(
+                      onPressed: () {
+                        Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (context) => HomePage()));
                       },
                     ),
-                  )
+                  ),
                 ],
               ),
             ),

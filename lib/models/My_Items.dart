@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 
 class MyItems {
   final String title;
-  //final List<Image> pictures;
+  final Image picture;
   final String description;
   final double priceHigh;
   final double priceLow;
@@ -11,7 +11,7 @@ class MyItems {
   MyItems({
   @required this.title, 
   @required this.description,
-  //@required this.pictures, 
+  @required this.picture, 
   @required this.priceHigh, 
   @required this.priceLow
   });
