@@ -37,7 +37,6 @@ class CreateAccount extends StatelessWidget {
                         borderRadius: BorderRadius.circular(25.0),
                       ),
                     ),
-                    obscureText: true,
                   ),
                  Padding(padding: EdgeInsets.only(top: 50.0)),
                   TextFormField(
@@ -48,7 +47,6 @@ class CreateAccount extends StatelessWidget {
                         borderRadius: BorderRadius.circular(25.0),
                       ),
                     ),
-                    obscureText: true,
                   ),
                   Padding(padding: EdgeInsets.only(top: 50.0)),
                   TextFormField(
@@ -59,7 +57,6 @@ class CreateAccount extends StatelessWidget {
                         borderRadius: BorderRadius.circular(25.0),
                       ),
                     ),
-                    obscureText: true,
                   ),
                   Padding(padding: EdgeInsets.only(top: 50.0)),
                   Container(

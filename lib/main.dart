@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './Creat_User.dart';
+import './Create_User.dart';
 import './Home_Page.dart';
 
 void main() => runApp(HackYo());
