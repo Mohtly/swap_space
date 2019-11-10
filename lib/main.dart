@@ -4,9 +4,9 @@ import './Login.dart';
 
 
 
-void main() => runApp(HackYo());
+void main() => runApp(MyApp());
 
-class HackYo extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
