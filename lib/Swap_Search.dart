@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tindercard/flutter_tindercard.dart';
+import 'package:swap_space/widgets/Bottom_Nav.dart';
 import './Home_Page.dart';
 
 class SwapSearch extends StatelessWidget {
@@ -86,6 +87,7 @@ class SwapSearch extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: BottomNav(curlIndex: 2,),
     );
   }
 }
