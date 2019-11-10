@@ -17,7 +17,7 @@ class _LoginState extends State<Login> {
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.all(30.0),
-        color: Colors.white,
+        color: Colors.grey[200],
         child: Container(
           child: Center(
             child: SingleChildScrollView(
@@ -25,7 +25,7 @@ class _LoginState extends State<Login> {
                 children: [
                   Text(
                     'Welcome to SwapSpace',
-                    style: TextStyle(color: Colors.orange, fontSize: 25.0),
+                    style: TextStyle(color: Colors.orange, fontSize: 25.0,fontWeight: FontWeight.bold),
                   ),
                   Padding(
                     padding: EdgeInsets.only(top: 50.0),
@@ -67,8 +67,12 @@ class _LoginState extends State<Login> {
                   ),
                   Padding(padding: EdgeInsets.only(top: 50.0)),
                   Container(
+                    width: 500,
                     child: RaisedButton(
-                      color: Colors.greenAccent,
+                      color: Colors.orange,
+                      textColor: Colors.white,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18),
+                      ),
                       child: Text('Submit'),
                       onPressed: () {
                         Navigator.push(

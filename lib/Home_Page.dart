@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:swap_space/Swap_Search.dart';
 import 'package:swap_space/widgets/My_Item_List.dart';
 import './models/My_Items.dart';
 import './widgets/New_Item.dart';
+import './widgets/Bottom_Nav.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -10,6 +12,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final List<MyItems> _userItems = [];
+  // var _curlIndex = 0;
+  // var contents = 'Home';
 
   void _addNewItem(String txTitle, String txDescription, double txLowValue,
       double txHighValue) {
@@ -17,8 +21,7 @@ class _HomePageState extends State<HomePage> {
         title: txTitle,
         description: txDescription,
         priceLow: txLowValue,
-        priceHigh: txHighValue
-      );
+        priceHigh: txHighValue);
 
     setState(() {
       _userItems.add(newItem);
@@ -27,27 +30,32 @@ class _HomePageState extends State<HomePage> {
 
   void _startAddNewItem(BuildContext ctx) {
     showModalBottomSheet(
-      context: ctx,
-      builder: (_) {
-        return NewItem(_addNewItem);
-      }
-    );
+        context: ctx,
+        builder: (_) {
+          return NewItem(_addNewItem);
+        });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('SwapSpace'),actions: <Widget>[
-        IconButton(
-          icon: Icon(
-            Icons.add,
+      appBar: AppBar(
+        backgroundColor: Colors.orange,
+        automaticallyImplyLeading: false,
+        centerTitle: true,
+        title: Text('SwapSpace',),textTheme: TextTheme(title: TextStyle(color: Colors.white, fontSize: 25.0,fontWeight: FontWeight.bold)),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.add,
+            ),
+            onPressed: () => _startAddNewItem(context),
           ),
-          onPressed: () =>  _startAddNewItem(context),
-        ),
-      ],),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Container(
-          color: Colors.white,
+          color: Colors.grey[200],
           child: Container(
             child: Center(
               child: SingleChildScrollView(
@@ -60,7 +68,6 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-
             ),
           ),
         ),
@@ -69,3 +76,4 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
