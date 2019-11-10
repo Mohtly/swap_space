@@ -3,7 +3,15 @@ import 'package:flutter/material.dart';
 import './Home_Page.dart';
 import './Create_User.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
+  @override
+  _LoginState createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  final _emailController = TextEditingController();
+  final _passwordConrtoller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,6 +38,7 @@ class Login extends StatelessWidget {
                         borderRadius: BorderRadius.circular(25.0),
                       ),
                     ),
+                    controller: _emailController,
                   ),
                   Padding(padding: EdgeInsets.only(top: 50.0)),
                   TextFormField(
@@ -41,6 +50,7 @@ class Login extends StatelessWidget {
                       ),
                     ),
                     obscureText: true,
+                    controller: _passwordConrtoller,
                   ),
                   Padding(padding: EdgeInsets.only(top: 50.0)),
                   FlatButton(
@@ -67,7 +77,8 @@ class Login extends StatelessWidget {
                                 builder: (context) => HomePage()));
                       },
                     ),
-                  )
+                  ),
+                  Text('${_emailController.text} ${_passwordConrtoller.text}')
                 ],
               ),
             ),
