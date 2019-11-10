@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './Home_Page.dart';
+
 class CreateAccount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -63,7 +65,11 @@ class CreateAccount extends StatelessWidget {
                     child: RaisedButton(
                       color: Colors.greenAccent,
                       child: Text('Submit'),
-                      onPressed: () {Navigator.pop(context);},
+                      onPressed: () {Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomePage()));
+                      },
                     ),
                   )
                 ],
