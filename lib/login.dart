@@ -67,6 +67,7 @@ class _LoginState extends State<Login> {
                   ),
                   Padding(padding: EdgeInsets.only(top: 50.0)),
                   Container(
+                    width: 50000,
                     child: RaisedButton(
                       color: Colors.greenAccent,
                       child: Text('Submit'),

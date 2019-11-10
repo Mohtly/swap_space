@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: const EdgeInsets.all(30.0),
+          //padding: const EdgeInsets.all(30.0),
           color: Colors.white,
           child: Container(
             child: Center(

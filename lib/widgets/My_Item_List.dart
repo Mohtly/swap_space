@@ -16,12 +16,13 @@ class MyItemList extends StatelessWidget {
           )
         : GridView.builder(
             gridDelegate:
-                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,childAspectRatio: MediaQuery.of(context).size.width /
+              (MediaQuery.of(context).size.height / 1), ),
             itemBuilder: (ctx, index) {
               return GestureDetector(
                 child: Card(
-                  elevation: 5,
-                  margin: EdgeInsets.symmetric(vertical: 8, horizontal: 5),
+                  elevation: 10,
+                  //margin: EdgeInsets.symmetric(vertical: 8, horizontal: 5),
                   child: Container(
                     child: Column(
                       children: <Widget>[
