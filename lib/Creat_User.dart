@@ -1,25 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './Creat_User.dart';
-import './Home_Page.dart';
-
-void main() => runApp(HackYo());
-
-class HackYo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: MyHome(),
-    );
-  }
-}
-
-class MyHome extends StatefulWidget {
-  @override
-  _MyHomeState createState() => _MyHomeState();
-}
-
-class _MyHomeState extends State<MyHome> {
+class CreateAccount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +13,7 @@ class _MyHomeState extends State<MyHome> {
               child: Column(
                 children: [
                   Text(
-                    'Welcome to SwapSpace',
+                    'Create Account',
                     style: TextStyle(color: Colors.orange, fontSize: 25.0),
                   ),
                   Padding(
@@ -50,6 +31,17 @@ class _MyHomeState extends State<MyHome> {
                   Padding(padding: EdgeInsets.only(top: 50.0)),
                   TextFormField(
                     decoration: InputDecoration(
+                      labelText: "Enter UserName",
+                      fillColor: Colors.white,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25.0),
+                      ),
+                    ),
+                    obscureText: true,
+                  ),
+                 Padding(padding: EdgeInsets.only(top: 50.0)),
+                  TextFormField(
+                    decoration: InputDecoration(
                       labelText: "Enter Password",
                       fillColor: Colors.white,
                       border: OutlineInputBorder(
@@ -59,29 +51,22 @@ class _MyHomeState extends State<MyHome> {
                     obscureText: true,
                   ),
                   Padding(padding: EdgeInsets.only(top: 50.0)),
-                  FlatButton(
-                    textColor: Colors.orange,
-                    child: Text('Create an account'),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => CreateAccount(),
-                        ),
-                      );
-                    },
+                  TextFormField(
+                    decoration: InputDecoration(
+                      labelText: "Re Enter Password",
+                      fillColor: Colors.white,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25.0),
+                      ),
+                    ),
+                    obscureText: true,
                   ),
                   Padding(padding: EdgeInsets.only(top: 50.0)),
                   Container(
                     child: RaisedButton(
                       color: Colors.greenAccent,
                       child: Text('Submit'),
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => HomePage()));
-                      },
+                      onPressed: () {Navigator.pop(context);},
                     ),
                   )
                 ],
