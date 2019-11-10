@@ -30,6 +30,7 @@
 
 import 'dart:io';
 import 'dart:typed_data';
+import 'package:esys_flutter_share/esys_flutter_share.dart';
 import 'package:flutter/material.dart';
 import 'package:path/path.dart';
 
@@ -64,6 +65,10 @@ class _PreviewImageScreenState extends State<PreviewImageScreen> {
                 padding: EdgeInsets.all(60.0),
                 child: RaisedButton(
                   onPressed: () {
+                    getBytesFromFile().then((bytes) {
+                      Share.file('Share via:', basename(widget.imagePath),
+                          bytes.buffer.asUint8List(), 'image/png');
+                    });
                   },
                   child: Text('Share'),
                 ),
