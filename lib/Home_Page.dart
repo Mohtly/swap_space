@@ -40,9 +40,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.orange,
         automaticallyImplyLeading: false,
         centerTitle: true,
-        title: Text('SwapSpace'),
+        title: Text('SwapSpace',),textTheme: TextTheme(title: TextStyle(color: Colors.white, fontSize: 25.0,fontWeight: FontWeight.bold)),
         actions: <Widget>[
           IconButton(
             icon: Icon(
@@ -54,7 +55,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          color: Colors.white,
+          color: Colors.grey[200],
           child: Container(
             child: Center(
               child: SingleChildScrollView(

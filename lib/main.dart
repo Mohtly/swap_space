@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import './Login.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
+import 'package:flutter/services.dart';
+
 
 void main() {
+
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+    statusBarBrightness: Brightness.light
+  ));
+
   final HttpLink httpLink = HttpLink(
     uri: 'https://api.github.com/graphql',
   );

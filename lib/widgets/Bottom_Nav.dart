@@ -13,12 +13,13 @@ class BottomNav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      selectedItemColor: Colors.orange,
       type: BottomNavigationBarType.fixed,
         currentIndex: curlIndex, // this will be set when a new tab is tapped
         items: [
           BottomNavigationBarItem(
             icon: new Icon(Icons.home),
-            title: new Text('Home'),
+            title: new Text('My Items'),
           ),
           BottomNavigationBarItem(
             icon: new Icon(Icons.mail),

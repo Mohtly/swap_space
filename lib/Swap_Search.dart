@@ -11,7 +11,7 @@ class SwapSearch extends StatelessWidget {
     return new Scaffold(
       body: new Center(
         child: Container(
-          color: Color(0xe4e5e9),
+          color: Colors.grey[200],
           height: MediaQuery.of(context).size.height,
           child: new TinderSwapCard(
             orientation: AmassOrientation.BOTTOM,
@@ -23,6 +23,7 @@ class SwapSearch extends StatelessWidget {
             minWidth: MediaQuery.of(context).size.width * 0.8,
             minHeight: MediaQuery.of(context).size.height * 0.8,
             cardBuilder: (context, index) => Card(
+              //color: Colors.blueGrey,
               child: new Container(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -35,7 +36,7 @@ class SwapSearch extends StatelessWidget {
                         child: SizedBox(
                           height: 376,
                           child: FittedBox(
-                            child: Image.asset('assets/bike.jpg'),
+                            child: Image.asset('assets/bike.jpg',height: 100,width: 170,),
                             fit: BoxFit.fill,
                           ),
                         ),
@@ -46,19 +47,21 @@ class SwapSearch extends StatelessWidget {
                         Text("My Bike My Bike My Bike My Bik",
                             style: TextStyle(
                                 height: 2,
-                                fontSize: 19,
+                                fontSize: 20,
                                 fontWeight: FontWeight.bold),
                             textAlign: TextAlign.center),
+                            Divider(thickness: 2, color: Colors.transparent,),
                         Text(
                           "My bike is in great condition, but it needs a new chain! My bike is in great condition, but it needs a new chain! 1234567890 1234567890 1234567890",
-                          style: TextStyle(height: 1, fontSize: 12),
+                          style: TextStyle(height: 1, fontSize: 18),
                           textAlign: TextAlign.center,
                         ),
+                        Divider(thickness: 2, color: Colors.transparent,),
                         Text(
                           "150\$-250\$",
                           style: TextStyle(
                               height: 2,
-                              fontSize: 12,
+                              fontSize: 15,
                               fontWeight: FontWeight.bold),
                           textAlign: TextAlign.center,
                         )
