@@ -45,10 +45,10 @@ class _NewItemState extends State<NewItem> {
           // TextField(
           //   controller: _titleController,
           // ),
-          Padding(padding: EdgeInsets.only(top: 5.0)),
+          //Padding(padding: EdgeInsets.only(top: 5.0)),
           TextFormField(
                     decoration: InputDecoration(
-                      labelText: "Enter Email",
+                      labelText: "Enter Title",
                       fillColor: Colors.white,
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(25.0),
