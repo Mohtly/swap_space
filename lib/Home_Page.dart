@@ -54,7 +54,6 @@ class _HomePageState extends State<HomePage> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          //padding: const EdgeInsets.all(30.0),
           color: Colors.white,
           child: Container(
             child: Center(
@@ -72,51 +71,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   type: BottomNavigationBarType.fixed,
-      //   currentIndex: _curlIndex, // this will be set when a new tab is tapped
-      //   items: [
-      //     BottomNavigationBarItem(
-      //       icon: new Icon(Icons.home),
-      //       title: new Text('Home'),
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: new Icon(Icons.mail),
-      //       title: new Text('Messages'),
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.assignment_turned_in),
-      //       title: Text('Matches'),
-      //     ),
-      //      BottomNavigationBarItem(
-      //       icon: Icon(Icons.add),
-      //       title: Text('New Item'),
-      //     ),
-      //   ],
-      //   onTap: (index) {
-      //     setState(() {
-      //       _curlIndex = index;
-      //       switch (_curlIndex) {
-      //         case 0:
-      //           contents = "Home";
-      //           break;
-      //         case 1:
-      //           contents = "Messages";
-      //           break;
-      //         case 2: {
-      //           Navigator.push(
-      //                       context,
-      //                       MaterialPageRoute(
-      //                           builder: (context) => SwapSearch()));
-                      
-      //           break;
-      //         }
-      //         case 3:
-      //           contents = 'New Item';
-      //       }
-      //     });
-      //   },
-      // ),
       bottomNavigationBar: BottomNav(curlIndex: 0,),
     );
   }
